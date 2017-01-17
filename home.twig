@@ -56,24 +56,22 @@
 					{% if profile.address %}A. {{ profile.address1 }} {{ profile.address2 }} {{ profile.postalcode }}{% endif %}
 				</p>
 				
-				<div class="row">
-					<div class="small-12 medium-5 large-4 columns">
-						{% if site.templateData['pageTypes': rsvp] is defined %}
-							{{widget('button', 'rsvpbutton', {
-							  'text': 'RSVP',
-							  'align': 'widget-align-center',
-							  'action': 'internal'
-							})|raw}}
-						{% endif %}
-					</div>
-					<div class="small-12 medium-7 large-8 columns">
-						{% if site.templateData['pageTypes': registry.twig] %}
-							{{widget('button', 'registrybutton', {
-							  'text': 'Gift Registry',
-							  'align': 'widget-align-center',
-							  'action': 'internal'
-							})|raw}}
-						{% endif %}
+				<div class="row collapse">
+					<div class="other-buttons">
+						<div class="small-12 medium-5 large-4 columns">
+								{{widget('button', 'rsvpbutton', {
+								  'text': 'RSVP',
+								  'align': 'widget-align-left',
+								  'action': 'internal'
+								})|raw}}
+						</div>
+						<div class="small-12 medium-7 large-8 columns">
+								{{widget('button', 'registrybutton', {
+								  'text': 'Gift Registry',
+								  'align': 'widget-align-left',
+								  'action': 'internal'
+								})|raw}}
+						</div>
 					</div>
 				</div>
 			</div>

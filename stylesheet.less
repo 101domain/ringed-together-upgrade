@@ -677,7 +677,7 @@ body { background-color: @color__body--background; }
 .gallery__image-link { height: 200px; }
 
 @media only screen and (min-width: 44.125em) { 
-	.main-content .row { padding-left:2em; padding-right:2em; }
+	.main-content > .row { padding-left:2em; padding-right:2em; }
 	.feature__hero .content-wrap {
 		position: relative;
 		top: 125px; 
@@ -697,6 +697,8 @@ body { background-color: @color__body--background; }
     width: 48%;
     margin-bottom: 0; }
   .main-content__banner-spot { margin:2.5em auto; }
+  .other-buttons { margin-top: 2em; }
+		.other-buttons button { width: 100%; }
 }
 
 
@@ -739,10 +741,10 @@ body { background-color: @color__body--background; }
 		font-size:1.25em;
 		margin-bottom:1em; }
 	.feature__content-wrap {
-    bottom: 10px; }
+		bottom: 10px; }
 	.feature__headline { 
 		font-size: 1.75em;
 		top:70px; }
-  .feature__location .widget span {
-  	font-size:0.9em; }
+	.feature__location .widget span {
+		font-size:0.9em; }
 }
