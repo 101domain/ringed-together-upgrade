@@ -562,16 +562,40 @@ body { background-color: @color__body--background; }
 .feature__hero .content-inner-wrap { 
 	padding: 0.75em;
 	border: 1px solid #fff; }
-
+.feature button {
+	background-color:#fff;
+	font-family:'Lato', sans-serif;
+	font-size:0.9em;
+	color:#e97086;
+	display:flex; 
+	flex-direction:column; 
+	justify-content: center;
+	margin:1em auto;
+	padding:3px 44px 3px 68px;
+	position:relative;
+	border-radius: none; }
+	.feature button:before {
+		content: "";
+		position:absolute;
+		background-image:image('/images/single-heart.png');
+		background-repeat:no-repeat;
+		background-size:contain;
+		height:20px;
+		width:20px;
+		left:40px; }
+	.feature button:hover {
+		background-color:#bd4a5f;
+		color:#e97086; }
 .headline { 
 	font-family: @font__feature-headline--font-family;
 	font-size: @font__feature-headline--font-size;
 	line-height: @font__feature-headline--line-height;
 	font-weight: @font__feature-headline--font-weight;
 	color: @color__feature-headline--text;
-  text-align: center;
-  width: 100%;
-  left: 0; }
+	text-align: center;
+	width: 100%;
+	left: 0;
+	margin-bottom: 0.25em; }
 .strapline { 
 	font-family: @font__feature-strapline--font-family;
 	font-size: @font__feature-strapline--font-size;
@@ -579,7 +603,7 @@ body { background-color: @color__body--background; }
 	letter-spacing: @font__feature-strapline--letter-spacing;
 	font-weight: @font__feature-strapline--font-weight;
 	color: @color__feature-strapline--text;
-  text-align: center; } 
+	text-align: center; } 
 
 .location { 
 	background-color:#ededed;

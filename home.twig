@@ -4,14 +4,14 @@
 
 	<section>
 	  <div class="feature__hero">
-			  	<!-- Theme Feature Widget -->
-		  			{{widget('feature', 'featurehome', {
-			        'defaultBgImg': asset("images/feature-t2.jpg"),
-			        'positionTopPercentage': '0',
-			        'header': 'Where & When?',
-		  				'strapline': '{{ profile.address }}, {{ profile.address1 }}, {{ profile.address2 }} {{ profile.postalcode }}<br />28th February, 2017 at 3:30pm',
-		  				'showBtn': true
-				    })|raw}}
+		<!-- Theme Feature Widget -->
+			{{widget('feature', 'featurehome', {
+			'defaultBgImg': asset("images/feature-t2.jpg"),
+			'positionTopPercentage': '0',
+			'header': 'Where & When?',
+			'strapline': '{{ profile.address }}, {{ profile.address1 }}, {{ profile.address2 }} {{ profile.postalcode }}<br />28th February, 2017 at 3:30pm',
+			'showBtn': true
+			})|raw}}
 	  </div>
 	</section>
 	
@@ -21,14 +21,6 @@
 	 		<div class="small-12 medium-6 columns">{{widget('content', 'maincolumn1', {content:'At vero eos et accusamus et iusto dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias laborum et dolorum fuga. Et harum quidem rerum'})|raw}}</div>
 	 		<div class="small-12 medium-6 columns">{{widget('content', 'maincolumn2', {content:'Lorum quidem rerum facilis est et expedita distinctio. Nam tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est.'})|raw}}</div>
 		</div>
-		
-		<div class="row main-content__banner-spot">
-			<div class="small-12 columns">
-				<a href="http://weddingchamber.vegas/" target="_new" rel="nofollow">
-					<img src="{{asset('images/web-banner-728-x-90.png')}}" alt="Destination Vegas!  Your day, your way.  Wedding Chamber in Las Vegas." />
-				</a>
-			</div>
-		</div> 
 		
 		<div class="row">
 			<div class="small-12 medium-6 columns">
