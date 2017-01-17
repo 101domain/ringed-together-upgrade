@@ -1,0 +1,25 @@
+{% extends "layout.twig" %}
+
+{% block content %}
+
+	{% include "includes/header.twig" %}
+	
+	<section class="our-story">
+		<div class="row">
+			<div class="small-12 columns">
+				{{widget('pagetitle', 'title', {})|raw}}
+			</div>
+		</div>
+		<div class="row">
+			<div class="small-12 columns story-copy">
+				{{widget('gallery', 'imagegallery', {})|raw}}
+			</div>
+		</div>	
+		<div class="row collapse">
+			<div class="small-12 columns">
+			    {{zone('main')|raw}}
+			</div>
+		</div>
+	</section>
+ 
+{% endblock %}

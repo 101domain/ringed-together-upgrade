@@ -1,0 +1,275 @@
+// -------------------------
+// BaseKit Standard Template
+// -------------------------
+
+
+// -----------------------------
+// #Table of Contents
+// -----------------------------
+
+// 1. #HEADER
+// 2. #FOOTER
+// 3. #TYPOGRAPHY
+// 4. #FORMS
+
+
+
+
+body {
+    background-color: @color__body--background;
+}
+
+
+
+
+// -----------------------------
+// 1. #HEADER
+// -----------------------------
+
+.bk-header { background-color:#fff; }
+.bk-header p, .bk-header li { color:#000; }
+.bk-header .company-link { 
+	font-family: @font__companyname--font-family; 
+	font-size: @font__companyname--font-size; 
+	line-height: 1em; 
+	text-transform:uppercase; 
+	color: @color__companyname--text; }
+a.company-link:hover { color: @color__companyname--text; }
+.bk-header .logo-type .content-block { display:none; }
+.bk-header nav .navigation-list { 
+	margin:0; 
+	padding-top:10px;
+	background: rgba(255,255,255,0.75); }
+.bk-header nav .navigation-list .navigation-item { padding:0 .75em; }
+.bk-header nav .navigation-item .item-name { 
+	font-family: @font__navigation--font-family; 
+	font-size: @font__navigation--font-size;
+	font-weight: @font__navigation--font-weight;
+	line-height: @font__navigation--line-height; 
+	color: @color__navigation--text; 
+	text-transform:uppercase; 
+	padding:0; }
+.bk-header nav .navigation-list .navigation-item.selected .item-name { color:#bc3a52; }
+.bk-header nav .navigation-list .navigation-item .item-name:hover { color:#000; }
+.bk-header .extendednavigation button { color:#000; }
+.bk-header .bk-button button { background-color:#e86f86; font-family:"Lato",sans-serif; font-weight:400; font-size:.7em; color:#fff; }
+.bk-header .bk-button button:hover { background-color:#e25771; }
+
+
+.feature__hero header { 
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:60px;
+	background-color:transparent;
+	background-image:none; }
+.navigation-list { background-color:transparent; }
+.navigation-list .navigation-list--children { background-color:#fff; }
+
+
+@media only screen and (min-width: 47.5em) { 
+	.bk-header { padding: 1em 0; }
+	.bk-header .company-link { font-size: 1.5em; } 
+	.bk-header .logo-type .content-block { 
+		display: block; 
+		font-family: @font__companyname--font-family; 
+		font-size:0.7em; 
+		line-height: 1em; 
+		text-transform:uppercase; 
+		color: #000;
+		letter-spacing: 1.5px;  }
+	.bk-header nav .navigation-list { margin:0; padding-top:10px; }
+	.bk-header nav .navigation-list { margin:0; padding-top:10px; }
+	.bk-header nav .navigation-list .navigation-item { padding:0 1.25em; }
+	.bk-header nav .navigation-item .item-name { font-family:"Lato", sas-serif; font-size:0.7em; color:#555; text-transform:uppercase; padding:0; }
+	.bk-header nav .navigation-list .navigation-item.selected .item-name { color:#bc3a52; }
+	.bk-header nav .navigation-list .navigation-item .item-name:hover { color:#000; }
+
+  .feature-header-nav .navigation-body {
+    top:0;
+    position: absolute;
+    width: 100%; }
+	.feature-header .feature__hero .widget .feature__background-image {
+    min-height: inherit;
+    position: relative;
+    top:48px;
+    width: 100%; }
+    .feature-header .feature__hero .content-wrap {
+	    position:relative;
+	    bottom: 0;
+	    border-bottom: none; }
+  .feature-header .feature__hero .feature-header-nav {
+  	position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    background-color: transparent;
+    background-image: none; }
+	.feature-header .feature__hero .feature-header-nav .widget {
+		top:0; }
+}
+@media only screen and (min-width: 44.1875em) { 
+	.bk-header button { display:none; }
+}
+@media only screen and (max-width: 44.125em) { 
+	.feature__hero .bk-header { display:block; }
+	
+	.bk-header button { padding:0; }
+	.navigation-toggle,
+	.navigation-toggle:hover,
+	.open .navigation-toggle {
+		background-color:transparent; }
+	.navigation-toggle:before {
+		background: rgba(0,0,0,1);
+    box-shadow: 0 6px 0 rgba(0,0,0,1); }
+  .navigation-toggle:hover:before, 
+  .navigation-toggle:hover:after {
+  	background-color:#000; }
+  .navigation-toggle:hover:before {
+  	box-shadow: 0 6px 0 #000; }
+  .navigation-toggle:after {
+  	background: rgba(0,0,0,1); }
+  .open .navigation-toggle:before { box-shadow:none; }
+  .open .navigation-toggle:hover:before, 
+  .open .navigation-toggle:hover:after,
+  .open .navigation-toggle:before,
+  .open .navigation-toggle:after {
+  	background-color:#000 !important; }
+ 	.navigation-item > .navigation-list--children { display:none; }
+  .navigation-item.open > .navigation-list--children { display:block; }
+  	
+  .bk-header nav > .navigation-list { 
+  	position:relative; 
+  	display:block; 
+  	background-color:#fff; }
+  .navigation-item { text-align:center; }
+  .navigation-item .navigation-list--children,
+  .navigation-item:hover .navigation-list--children { 
+  	display: none; }
+  .navigation-item.open .navigation-list--children { 
+  	display: block;
+  	position: inherit;
+  	border:none;
+  	padding: 0; }
+  .navigation-item.open .navigation-list--children .navigation-item--child:first-child { border-top: 1px solid #e6e6e6; }
+  .navigation-item.open .navigation-list--children .navigation-item--child:last-child { border-bottom: none; }
+  .bk-header nav .navigation-item .item-name,
+  .bk-header nav .navigation-list .navigation-item .item-name:hover { 
+  	color: #000; }
+  .navigation-list.open .navigation-item .item-name {
+  	padding:1em 0;
+  	text-align:center; }
+  .navigation-list.open .navigation-item .item-name--parent:after {
+  	margin-left:0;
+    border: none; }
+  .navigation-list--children {
+  	margin-top:1em;
+  	border: 1px solid #ededed;
+    background-color: #fff; }
+  .navigation-list--children .item-name {
+  	padding:1em 0; }
+  .navigation-list--children .item-name:hover { background-color:rgba(0,0,0,.5); }
+  
+  .feature-header { position:relative; width:100%; top:0; height:45px; }
+  .feature-header .feature__hero--content { height:45px; }
+  .feature-header .feature__hero--content > .widget { display:none; }
+  .feature-header .feature-header-nav { position:absolute; width:100%; }
+}
+
+
+
+
+// Default Page
+// ------------
+
+.template-default {
+    .template-header {
+        border-bottom: 3px solid darken(@color__body--background, 8%);
+        margin-bottom: 2.5em;
+        @media @tablet {
+            margin-bottom: 20px;
+        }
+    }
+}
+
+
+
+
+// -----------------------------
+// 2. #FOOTER
+// -----------------------------
+
+footer { background-color:#fff; padding:3em 0 1em; }
+footer nav .navigation-list .navigation-item .item-name { font-family:'Lato',sans-serif; font-size:.8em; color:#fff; }
+footer nav .navigation-list .navigation-item.selected .item-name { color:#e86f86; }
+footer .company-link { text-transform:uppercase; }
+
+.bk-footer { 
+	background-color: #fff; 
+	color:#373737; 
+	padding:1em 0;
+	border-top:2px solid #d6d6d7; }
+	
+.social-item { background-color:#ea7186; }
+	.social-item:hover { background-color:#e25771; }
+	.social-item .social-link:before { color:#fff; }
+
+@media only screen and (min-width: 40.063em) { 
+	.bk-footer button { display:none; }
+}
+@media only screen and (max-width: 40em) { 
+	.bk-footer .navigation-list { display:none; }
+	.couple-contact h5 { text-align:center; }
+	.bk-footer .text-left,
+	.bk-footer .text-right {
+		text-align:center !important;
+		margin:0.25em auto; }
+}
+
+
+// -----------------------------
+// 3. #TYPOGRAPHY
+// -----------------------------
+
+.company-link {
+    color: @color__companyname--text;
+    font-family: @font__companyname--font-family;
+    font-size: @font__companyname--font-size;
+    font-weight: @font__companyname--font-weight;
+    line-height: @font__companyname--line-height;
+    letter-spacing: @font__companyname--letter-spacing;
+    @media only screen and (max-width : 600px) {
+        font-size: bkscale(@font__companyname--font-size,0.8);
+        line-height: bkscale(@font__companyname--line-height,0.8);
+    }
+}
+
+a {
+    color: @color__link--text;
+}
+
+h1 {
+    color: @color__h1--text;
+}
+
+h2 {
+    color: @color__h2--text;
+}
+
+h3 {
+    color: @color__h3--text;
+}
+
+h4 {
+    color: @color__h4--text;
+}
+
+p {
+    color: @color__p--text;
+}
+
+
+
+
+

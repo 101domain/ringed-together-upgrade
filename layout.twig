@@ -1,0 +1,83 @@
+<!doctype html>
+<!--[if lt IE 7]>
+	<html class="no-js ie6 oldie" lang="en">
+<![endif]-->
+<!--[if IE 7]>
+	<html class="no-js ie7 oldie" lang="en">
+<![endif]-->
+<!--[if IE 8]>
+	<html class="no-js ie8 oldie" lang="en">
+<![endif]-->
+<!--[if gt IE 8]><!-->
+	<html class="no-js" lang="{{ page.seoLang }}">
+<!--<![endif]-->
+<head>
+	<meta charset="utf-8" />
+	<title>{{ page.title }}</title>
+	<meta name="keywords" content="{{ page.keywords }}" />
+	<meta name="description" content="{{ page.description }}" />
+	<meta http-equiv="content-language" content="{{ page.seoLang }}" />
+
+	{% if site.favicon %}
+		<link rel="icon" href="{{ site.favicon['favicon'] }}" type="image/x-icon" />
+		<link rel="SHORTCUT ICON" href="{{ site.favicon['thumbnail'] }}?v={{ "now"|date("U") }}" type="image/x-icon" />
+	{% endif %}
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+
+	{% include basekit.headScript %}
+</head>
+<body class="{{ page.backgroundClass }}">
+
+	 <header class="bk-header">
+	 	<div class="row">
+			<div class="small-12 medium-5 large-4 columns logo-type text-center">
+			    {{widget('companyname', 'headercouplename', {"headline": "profile"})|raw}}
+			    {{widget('content', 'contactblurb', {content:'Are getting married'})|raw}}
+			</div>
+			<div class="small-12 medium-7 large-8 columns">
+			    {{widget('extendednavigation', 'navigation', {"align":"right"})|raw}}
+			</div>
+		</div>
+	</header>
+	
+	{% block content %}
+	{% endblock %}
+
+	<footer>
+    <div class="row">
+       <div class="small-12 text-center">
+          {{widget('companyname', 'headercouplename', {"headline": "profile"})|raw}}
+       </div>
+	  </div>
+	  <div class="row">
+       <div class="small-12 text-center">
+         {{widget('socialicons', 'socialnetworks', { 'twitter': 'profile', 'facebook': 'profile' })|raw}} 
+       </div>
+	  </div>
+	</footer>
+	
+	{% include basekit.bodyScript %}
+	
+	<!-- Nav Menu Script -->
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+	<script>
+	    // Toggles class open to display/hide the whole navigation
+	    ( function($) {
+		    $( ".navigation-toggle" ).click(function() {
+		        $( ".bk-extendednavigation" ).toggleClass( "open" );
+		    });
+		   } ) ( jQuery );
+	    // Toggles class open to display/hide folders
+	    ( function($) {
+		    $( ".navigation-item.folder" ).each(function() {
+		        $( this ).click(function() {
+		            $( this ).toggleClass( "open" );
+		        });
+	    	});
+	    } ) ( jQuery );
+	</script>
+	
+</body>
+</html>

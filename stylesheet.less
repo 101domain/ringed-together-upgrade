@@ -1,0 +1,724 @@
+// -----------------------------
+// Template Imports
+// -----------------------------
+
+@import "@{templateCommon}/bk-less-framework-v8.less"; // BaseKit LESS Framework
+
+@import url(https://fonts.googleapis.com/css?family=Lato|Playfair+Display);
+
+@import "@{templateLocal}/less/responsive.less";  // Responsive framework
+@import "@{templateLocal}/less/mixins.less";       // Widgets
+@import "@{templateLocal}/less/widgets.less";       // Widgets
+@import "@{templateLocal}/less/template.less";  // Header & Footer styling
+
+
+
+
+// -----------------------------
+// Typography
+// -----------------------------
+
+.company-link {
+    color: @color__companyname--text;
+    font-family: @font__companyname--font-family;
+    font-size: @font__companyname--font-size;
+    font-weight: @font__companyname--font-weight;
+    line-height: @font__companyname--line-height;
+    letter-spacing: @font__companyname--letter-spacing;
+    @media only screen and (max-width : 600px) {
+        font-size: bkscale(@font__companyname--font-size,0.8);
+        line-height: bkscale(@font__companyname--line-height,0.8);
+    }
+}
+
+a {
+    color: @color__link--text;
+    .transition( all, 0.5s, ease );
+}
+
+.profile a {
+    color: @color__link--text;
+}
+
+h1 {
+	font-family: @font__h1--font-family;
+	font-size: @font__h1--font-size;
+	font-weight: @font__h1--font-weight;
+	line-height: @font__h1--line-height;
+	color: @color__h1--text; }
+
+h2 {
+    color: @color__h2--text;
+    font-family: @font__h2--font-family;
+    font-size: @font__h2--font-size;
+    font-weight: @font__h2--font-weight;
+    line-height: @font__h2--line-height;
+    letter-spacing: @font__h2--letter-spacing;
+}
+
+h3 {
+    color: @color__h3--text;
+    font-family: @font__h3--font-family;
+    font-size: @font__h3--font-size;
+    font-weight: @font__h3--font-weight;
+    line-height: @font__h3--line-height;
+    letter-spacing: @font__h3--letter-spacing;
+}
+
+h4 {
+    color: @color__h4--text;
+    font-family: @font__h4--font-family;
+    font-size: @font__h4--font-size;
+    font-weight: @font__h4--font-weight;
+    line-height: @font__h4--line-height;
+    letter-spacing: @font__h4--letter-spacing;
+}
+
+p {
+    color: @color__p--text;
+    font-family: @font__p--font-family;
+    font-size: @font__p--font-size;
+    font-weight: @font__p--font-weight;
+    line-height: @font__p--line-height;
+    letter-spacing: @font__p--letter-spacing;
+}
+
+
+
+
+// -----------------------------
+// Homepage container
+// -----------------------------
+
+.bk-pt-home .container {
+    margin-top: 3em;
+    @media @tablet {
+        margin-top: 2.5em;
+    }
+}
+
+
+
+
+// -----------------------------
+// Widgets
+// -----------------------------
+
+.container .widget {
+    width: 90%;
+    margin-right: 5%;
+    margin-left: 5%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    @media only screen and (min-width: 1140px) {
+        width: 960px; // 1140px - 10% for margins
+        margin: 10px auto;
+    }
+}
+
+.template-content {
+    margin-top: 50px;
+    @media @mobile {
+        margin-top: 30px;
+    }
+}
+
+
+
+// -----------------------------
+// Tag link
+// -----------------------------
+
+.tag-link:after {
+    content: "\002C";
+}
+
+.tag-item:last-child .tag-link:after {
+    content: "";
+}
+
+
+
+
+// -----------------------------
+// Content Widget
+// -----------------------------
+
+@media @mobile {
+    h1 {
+        font-size: bkscale(@font__h1--font-size,0.8);
+        line-height: bkscale(@font__h1--line-height,0.8);
+    }
+    h2 {
+        font-size: bkscale(@font__h2--font-size,0.8);
+        line-height: bkscale(@font__h2--line-height,0.8);
+    }
+    h3 {
+        font-size: bkscale(@font__h3--font-size,0.8);
+        line-height: bkscale(@font__h3--line-height,0.8);
+    }
+    h4 {
+        font-size: bkscale(@font__h4--font-size,0.9);
+        line-height: bkscale(@font__h4--line-height,0.9);
+    }
+    p {
+        font-size: bkscale(@font__p--font-size,0.9);
+        line-height: bkscale(@font__p--line-height,0.9);
+    }
+}
+
+
+
+
+// -----------------------------
+// Blockquote
+// -----------------------------
+
+.content blockquote {
+    position: relative;
+    quotes: "“" "”" "“" "”";
+    margin-right: 5%;
+    padding-left: 35px;
+    margin-top: 20px;
+    margin-bottom: 15px;
+    font-family: @font__h3--font-family;
+    color: @color-swatch4;
+    @media @mobile {
+        margin-right: 0;
+    }
+    &:before {
+        position: absolute;
+        left: 0;
+        top: -5px;
+        font-size: 60px;
+        line-height: 50px;
+        padding: 0;
+        width: 28px;
+        height: 32px;
+        text-align: center;
+        vertical-align: middle;
+        color: @color-swatch4;
+    }
+    h1, h2, h3, h4, p, a {
+        font-family: @font__h3--font-family;
+        color: @color-swatch4;
+    }
+}
+
+
+
+
+// -----------------------------
+// Click to Call Widget
+// -----------------------------
+
+.clicktocall {
+    a:hover {
+        text-decoration: none;
+        cursor: text;
+    }
+    @media @mobile {
+        .phone-number-link {
+            width: 100%;
+            padding: 8px 20px;
+            text-align: center;
+        }
+        a:hover {
+            cursor: pointer;
+        }
+        .label {
+            color: @color__button--text;
+        }
+    }
+}
+
+
+
+
+// -----------------------------
+// Dropbox Label
+// -----------------------------
+
+.dropbox .label {
+    margin-left: 10px;
+}
+
+
+
+
+// -----------------------------
+// Image Widget
+// -----------------------------
+
+.imagewidget {
+    .image-link {
+        width: 100%;
+        text-align: center;
+    }
+    .image-title {
+        font-family:@font__feature-headline--font-family;
+        font-size:20px;
+        font-weight: 400;
+        line-height:30px;
+        color: @color-swatch4;
+        letter-spacing: inherit;
+    }
+    .image-description {
+        font-family:@font__feature-strapline--font-family;
+        font-size:16px;
+        font-weight: 400;
+        line-height:26px;
+        color: @color-swatch5;
+        letter-spacing: inherit;
+    }
+}
+
+
+
+// -----------------------------
+// Divider (Keyline)
+// -----------------------------
+
+hr.rule {
+    height: 2px;
+    background-color: darken(@color__body--background, 10%);
+}
+
+
+// Horizontal rule in blog posts
+hr {
+    height: 1px;
+    border: 0;
+    margin-bottom: 10px;
+    background-color: darken(@color__body--background, 10%);
+}
+
+
+
+
+// -----------------------------
+// Yelp
+// -----------------------------
+
+
+.yelpreview ul {
+    list-style: none;
+    margin: 16px 0;
+}
+
+
+
+
+// -----------------------------
+// Twitter Feed
+// -----------------------------
+
+.twitter .tweet-item {
+    p {
+        padding-bottom: 0;
+    }
+    .tweet-wrap {
+        max-width: 80%;
+    }
+    .avatar {
+        max-width: 16%;
+        margin-right: 15px;
+        @media @mobile {
+            margin-bottom: 10px;
+            margin-right: 0;
+        }
+    }
+    .avatar-image {
+        -webkit-border-radius: 3px;
+        -moz-border-radius: 3px;
+        border-radius: 3px;
+    }
+    .tweet-wrap {
+        max-width: 77%;
+        margin-top: -3px;
+        @media @mobile {
+            padding-left: 0;
+            border: none;
+            margin: 0 auto;
+        }
+    }
+    .avatar,
+    .tweet-wrap {
+        display: inline-block;
+        vertical-align: top;
+        @media @mobile {
+            max-width: 100%;
+            width: 100%;
+        }
+    }
+    .account-link {
+        font-family: @font__h3--font-family;
+        color: @color__primary;
+        font-size: @font__p--font-size;
+        font-weight: @font__p--font-weight;
+        line-height: @font__p--line-height;
+    }
+    .tweet-metadata {
+        font-size: 90%;
+        .timestamp,
+        .via {
+            color: lighten(@color-swatch5, 15%)
+        }
+    }
+    .timestamp {
+        margin-right: 5px;
+    }
+}
+
+// Three Columns on Tablet
+.columns-three-left,
+.columns-three-middle,
+.columns-three-right {
+    .twitter .tweet-item {
+        .avatar {
+            margin-bottom: 10px;
+            margin-right: 0;
+        }
+        .tweet-wrap {
+            padding-left: 0;
+            border: none;
+            margin: 0 auto;
+        }
+        .avatar,
+        .tweet-wrap {
+            max-width: 100%;
+            width: 100%;
+        }
+    }
+}
+
+// Four Columns
+.columns-four-first,
+.columns-four-second,
+.columns-four-third,
+.columns-four-fourth {
+    .twitter .tweet-item {
+        .avatar {
+            margin-bottom: 10px;
+            margin-right: 0;
+        }
+        .tweet-wrap {
+            padding-left: 0;
+            border: none;
+            margin: 0 auto;
+        }
+        .avatar,
+        .tweet-wrap {
+            max-width: 100%;
+            width: 100%;
+        }
+    }
+}
+
+
+
+
+// -------------------
+// Social Icons Widget
+// -------------------
+
+
+.social-item {
+    margin-right: 0;
+}
+
+.social-link {
+    padding: 5px;
+    color: @color__socialicons--icon;
+}
+
+// Social icons colour
+.social-link:before {
+    color: @color__socialicons--icon;
+    margin-right: 10px;
+}
+
+// Social icons transition text
+.social-name {
+    width: 0;
+    visibility:hidden;
+    opacity:0;
+    font-size: 0;
+    .transition( all, 0.5s, ease );
+}
+
+.social-link:hover {
+    text-decoration: none;
+    .social-name {
+        width: auto;
+        visibility: visible;
+        opacity: 1;
+        font-size: 16px;
+        .transition( all, 0.5s, ease );
+    }
+}
+
+
+
+
+// -----------------------------
+// Profile Widget
+// -----------------------------
+
+.profile {
+    h1, h2, h3, h4, p, a, .social-link:before {
+        font-size: bkscale(@font__p--font-size,0.8);
+        line-height: bkscale(@font__p--line-height,0.8);
+        color: @color-swatch6;
+        padding-bottom: 0;
+    }
+    .legend {
+        font-size: bkscale(@font__p--font-size,0.9);
+        line-height: bkscale(@font__p--line-height,0.9);
+        color: @color-swatch6;
+    }
+    input {
+        font-size: bkscale(@font__p--font-size,0.8);
+        line-height: bkscale(@font__p--line-height,0.8);
+        color: @color-swatch6;
+    }
+    .address .address-line {
+        display: inline-block;
+        &:after {
+            display: inline-block;
+            content: ",";
+        }
+        &:last-child:after {
+            display: none;
+        }
+    }
+    .address p {
+        padding-bottom: 0;
+    }
+}
+
+// Profile Widget: Signup Form Fail Message
+.hero-header,
+.template-footer {
+    .overlay.fail .message-box .message-text {
+        font-size: bkscale(@font__p--font-size,0.8);
+        line-height: bkscale(@font__p--line-height,0.8);
+        color: @color-swatch6;
+    }
+}
+
+// Profile Widget: Twitter
+.profile .twitter .tweet-item {
+    .avatar {
+        display: none;
+    }
+    .tweet-wrap {
+        width: 100%;
+        max-width: 100%;
+        margin: 0 auto 20px;
+        padding-left: 0;
+        border: none;
+    }
+    .tweet-content a,
+    .account-link {
+        color: @color-swatch3;
+    }
+    .tweet-metadata {
+        .timestamp,
+        .via {
+            color: @color-swatch6;
+        }
+    }
+}
+
+// Profile Widget: Map Widget
+.map {
+    border: 1px solid darken(@color__body--background, 8%);
+}
+
+
+body { background-color: @color__body--background; }
+
+.text-center { text-align:center !important; }
+.text-right { text-align:right !important; }
+.text-left { text-align:left !important; }
+
+
+// -----------------------------
+// Home Page
+// -----------------------------
+
+.feature__hero { position:relative; }
+.feature__hero .widget .feature__background-image { min-height: 400px; background-size: cover; }
+.feature__hero--content { position:relative; top:0; width: 100%; }
+.feature__hero .content-wrap {
+	position: relative;
+	top: 10px; 
+	width: 100%;
+	padding: 0.5em;
+	text-align: center;
+	margin: 0 auto;
+	background-color: rgba(0,0,0,.45); }
+.feature__hero .content-inner-wrap { 
+	padding: 0.75em;
+	border: 1px solid #fff; }
+
+.headline { 
+	font-family: @font__feature-headline--font-family;
+	font-size: @font__feature-headline--font-size;
+	line-height: @font__feature-headline--line-height;
+	font-weight: @font__feature-headline--font-weight;
+	color: @color__feature-headline--text;
+  text-align: center;
+  width: 100%;
+  left: 0; }
+.strapline { 
+	font-family: @font__feature-strapline--font-family;
+	font-size: @font__feature-strapline--font-size;
+	line-height: 1em;
+	letter-spacing: @font__feature-strapline--letter-spacing;
+	font-weight: @font__feature-strapline--font-weight;
+	color: @color__feature-strapline--text;
+  text-align: center; } 
+
+.location { 
+	background-color:#ededed;
+	padding:1em 0; }
+	.location span { 
+		font-family:'Playfair Display',serif;
+		font-size:.9em;
+		color:#373737; }
+	.location button {
+		border:1px solid #c0bfbf;
+		border-radius:6px;
+		background-color:#fff;
+		font-family:'Lato', sans-serif;
+		font-size:0.9em;
+		color:#e97086;
+		display:flex; 
+		flex-direction:column; 
+		justify-content: center;
+		margin:1em 0;
+		padding:3px 44px 3px 64px;
+		position:relative; }
+		.location button:before {
+			content: "";
+			position:absolute;
+			background-image:image('/images/single-heart.png');
+			background-repeat:no-repeat;
+			background-size:contain;
+			height:20px;
+			width:20px;
+			left:40px; }
+		.location button:hover {
+			background-color:#bd4a5f;
+			color:#e97086; }
+			
+#page-zones__template-widgets__content-wherewhenheading span  {
+	font-family: 'Lato',sans-serif;
+	color:#e97086;
+	font-size:1.25em;
+	display:flex; 
+	flex-direction:column; 
+	justify-content: center;
+	margin:1em 0;
+	text-align:right;
+	text-transform:uppercase; }
+
+.main-content { background-color: #fff; }
+.main-content > div:first-child { padding-top:3.5em; padding-bottom:1.5em; }
+.main-content > div:last-child { padding-top:1.5em; padding-bottom:2em; }
+.main-content .content-block { 
+	font-family:'Playfair Display',serif; 
+	font-size:.9em; 
+	color:#373737; }
+#page-zones__template-widgets__content-mainheading  span { 
+	font-family:'Playfair Display',serif; 
+	font-weight:400; 
+	font-size:1.65em; 
+	line-height:1.15em; 
+	color:#e97086;
+	display:block;
+	text-align: center;
+	margin-bottom: 1.5em; }
+.main-content__banner-spot { text-align:center; }
+
+.gallery-list { margin: 0; }
+.gallery-list li { 
+	margin-right: .5em; 
+	margin-bottom: .5em; }
+	
+.gallery__caption {
+    display: none; }
+.gallery__image-link { height: 200px; }
+
+@media only screen and (min-width: 44.125em) { 
+	.main-content .row { padding-left:2em; padding-right:2em; }
+	.feature__hero .content-wrap {
+		position: relative;
+		top: 125px; 
+		width: 50%;
+		padding: 0.5em;
+		text-align: center;
+		margin: 0 auto;
+		background-color: rgba(0,0,0,.45); }
+	.feature__hero .content-inner-wrap { 
+		padding: 0.75em;
+		border: 1px solid #fff; }
+	.strapline { line-height: 1.5em; }
+	
+	.feature__hero .widget .feature__background-image { min-height: 450px; }
+	.feature__location .widget span { font-size:1.25em; }
+	.gallery__gallery-item {
+    width: 48%;
+    margin-bottom: 0; }
+  .main-content__banner-spot { margin:2.5em auto; }
+}
+
+
+	
+	// -----------------------------
+// RSVP page
+// -----------------------------
+
+#page-zones__template-widgets__content-rsvpcopy {
+	font-family: "Lato",sans-serif;
+  font-weight: 400;
+  font-size: 1.25em;
+  color: #555;
+  margin:1em 0; }
+
+.contactform__form  { margin-bottom:2em;}
+.contactform__label {
+	font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 1em;
+  color: #555; }
+  
+.bk-advancedcontactform legend { display:none; }
+.bk-advancedcontactform .button { 
+	background-color: #e86f86;
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 1em;
+  color: #fff; }
+.bk-advancedcontactform .button:hover { background-color: #e25771; }
+
+@media only screen and (max-width: 44.125em) { 
+	section.our-story { margin:1.5em; }
+	.feature__content-inner-wrap::before { top:0; }
+	.feature__hero .widget .feature__background-image { min-height:200px; }
+	#page-zones__template-widgets__content-wherewhenheading span,
+	.location button { text-align:center; margin:0 auto; }
+	#page-zones__template-widgets__content-mainheading  span { 
+		text-align:center;
+		font-size:1.25em;
+		margin-bottom:1em; }
+	.feature__content-wrap {
+    bottom: 10px; }
+	.feature__headline { 
+		font-size: 1.75em;
+		top:70px; }
+  .feature__location .widget span {
+  	font-size:0.9em; }
+}
