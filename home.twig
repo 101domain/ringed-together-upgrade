@@ -9,7 +9,7 @@
 			'defaultBgImg': asset("images/feature-t2.jpg"),
 			'positionTopPercentage': '0',
 			'header': 'Where & When?',
-			'strapline': '{{ profile.address }}, {{ profile.address1 }}, {{ profile.address2 }} {{ profile.postalcode }}<br />28th February, 2017 at 3:30pm',
+			'strapline': '{{ profile.address }}, {{ profile.address1 }}, {{ profile.address2 }} {{ profile.postalcode }}, 28th February, 2017 at 3:30pm',
 			'showBtn': true
 			})|raw}}
 	  </div>
@@ -58,7 +58,7 @@
 				
 				<div class="row">
 					<div class="small-12 medium-5 large-4 columns">
-						{% if site.templateData['pageTypes': rsvp] %}
+						{% if site.templateData['pageTypes': rsvp.twig] %}
 							{{widget('button', 'rsvpbutton', {
 							  'text': 'RSVP',
 							  'align': 'widget-align-center',
@@ -67,7 +67,7 @@
 						{% endif %}
 					</div>
 					<div class="small-12 medium-7 large-8 columns">
-						{% if site.templateData['pageTypes': registry] %}
+						{% if site.templateData['pageTypes': registry.twig] %}
 							{{widget('button', 'registrybutton', {
 							  'text': 'Gift Registry',
 							  'align': 'widget-align-center',
