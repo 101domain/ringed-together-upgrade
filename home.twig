@@ -58,7 +58,7 @@
 				
 				<div class="row">
 					<div class="small-12 medium-5 large-4 columns">
-						{% if site.templateData['pageTypes': 'rsvp'] %}
+						{% if site.templateData['pageTypes': home] is defined %}
 							{{widget('button', 'rsvpbutton', {
 							  'text': 'RSVP',
 							  'align': 'widget-align-center',
