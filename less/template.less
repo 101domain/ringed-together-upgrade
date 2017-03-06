@@ -38,7 +38,6 @@ a.company-link:hover { color: @color__companyname--text; }
 .bk-header .logo-type .content-block { display:none; }
 .bk-header nav .navigation-list { 
 	margin:0; 
-	padding-top:10px;
 	background: rgba(255,255,255,0.75); }
 .bk-header nav .navigation-list .navigation-item { padding:0 .75em; }
 .bk-header nav .navigation-item .item-name { 
@@ -109,6 +108,9 @@ a.company-link:hover { color: @color__companyname--text; }
 	.feature-header .feature__hero .feature-header-nav .widget {
 		top:0; }
 }
+@media only screen and (max-width: 47.4375em) and (min-width: 44.125em) { 
+	.bk-header { padding: 0.5em 0; }
+}
 @media only screen and (min-width: 44.1875em) { 
 	.bk-header button { display:none; }
 }
@@ -136,8 +138,8 @@ a.company-link:hover { color: @color__companyname--text; }
   .open .navigation-toggle:before,
   .open .navigation-toggle:after {
   	background-color:#000 !important; }
- 	.navigation-item > .navigation-list--children { display:none; }
-  .navigation-item.open > .navigation-list--children { display:block; }
+  .navigation-item > .navigation-list--children { display:none; }
+  .navigation-item.open > .navigation-list--children { position:absolute; display:block; }
   	
   .bk-header nav > .navigation-list { 
   	position:relative; 
@@ -161,8 +163,7 @@ a.company-link:hover { color: @color__companyname--text; }
   	padding:1em 0;
   	text-align:center; }
   .navigation-list.open .navigation-item .item-name--parent:after {
-  	margin-left:0;
-    border: none; }
+  	margin-left:0; }
   .navigation-list--children {
   	margin-top:1em;
   	border: 1px solid #ededed;
@@ -177,7 +178,9 @@ a.company-link:hover { color: @color__companyname--text; }
   .feature-header .feature-header-nav { position:absolute; width:100%; }
 }
 
-
+@media only screen and (min-width: 30.0625em) { 
+	.navigation-list { text-align: center;	}
+}
 
 
 // Default Page
