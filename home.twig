@@ -9,7 +9,7 @@
 				'defaultBgImg': asset("images/feature-t2.jpg"),
 				'positionTopPercentage': '0',
 				'header': 'Where & When?',
-				'strapline': '{{ profile.address }}, {{ profile.address1 }}, {{ profile.address2 }} {{ profile.postalcode }}, 28th February, 2017 at 3:30pm',
+				'strapline': '123 your address here, day month year at time',
 				'showBtn': true
 			})|raw}}
 	  </div>
@@ -23,7 +23,7 @@
 		</div>
 		
 		<div class="row">
-			<div class="small-12 medium-6 columns">
+			<div class="small-12 medium-8 large-6 columns">
 				{{widget('gallery', 'imagegallery', {
 				  'showTitle': true,
 				  'showDescription': false,
@@ -47,31 +47,28 @@
 				  ]
 				})|raw}}
 			</div>
-			<div class="small-12 medium-6 columns">
+			<div class="small-12 medium-4 large-6 columns wrapup">
 				<p>{{ profile.companydescription }}</p>
 				
 				<p>
 					{% if profile.phone %}T. {{ profile.phone }}<br />{% endif %}
 					{% if profile.email %}E. {{ profile.email }}<br />{% endif %}
-					{% if profile.address %}A. {{ profile.address1 }} {{ profile.address2 }} {{ profile.postalcode }}{% endif %}
 				</p>
 				
-				<div class="row collapse">
-					<div class="other-buttons">
-						<div class="small-12 medium-5 large-4 columns">
-								{{widget('button', 'rsvpbutton', {
-								  'text': 'RSVP',
-								  'align': 'widget-align-left',
-								  'action': 'internal'
-								})|raw}}
-						</div>
-						<div class="small-12 medium-7 large-8 columns">
-								{{widget('button', 'registrybutton', {
-								  'text': 'Gift Registry',
-								  'align': 'widget-align-left',
-								  'action': 'internal'
-								})|raw}}
-						</div>
+				<div class="row">
+					<div class="small-12 medium-5 large-4 columns">
+						{{widget('button', 'rsvpbutton', {
+						  'text': 'RSVP',
+						  'align': 'widget-align-center',
+						  'action': 'internal'
+						})|raw}}
+					</div>
+					<div class="small-12 medium-7 large-8 columns">
+						{{widget('button', 'registrybutton', {
+						  'text': 'Gift Registry',
+						  'align': 'widget-align-center',
+						  'action': 'internal'
+						})|raw}}
 					</div>
 				</div>
 			</div>
